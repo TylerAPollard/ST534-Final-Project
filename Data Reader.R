@@ -51,7 +51,14 @@ mumbai_series_plot <- ggplot(data = mumbai_temp_df) +
 mumbai_series_plot
 
 ## Write out cleaned data ----
-write.csv(mumbai_temp_df, "Cleaned Mumbai Temperature Data.csv")
+write.csv(mumbai_temp_df, "Cleaned Mumbai Temperature Data.csv", 
+          row.names = FALSE)
+write.table(mumbai_temp_df, "Cleaned Mumbai Temperature Data.txt",
+            append = FALSE, 
+            sep = " ", 
+            dec = ".",
+            row.names = FALSE,
+            col.names = TRUE)
 
 # Read in Ajaccio Daily Temperature Data ----
 ajaccio_temp_data <- fread("ajaccio_daily_temperature.csv")
@@ -92,7 +99,14 @@ ajaccio_series_plot <- ggplot(data = ajaccio_temp_df) +
 ajaccio_series_plot
 
 ## Write out clean data ----
-write.csv(ajaccio_temp_df, "Cleaned Ajaccio Temperature Data.csv")
+write.csv(ajaccio_temp_df, "Cleaned Ajaccio Temperature Data.csv",
+          row.names = FALSE)
+write.table(ajaccio_temp_df, "Cleaned Ajaccio Temperature Data.txt",
+            append = FALSE, 
+            sep = " ", 
+            dec = ".",
+            row.names = FALSE,
+            col.names = TRUE)
 
 # Read in Gold Data ----
 gold_data <- fread("GoldUP.csv")
@@ -125,6 +139,14 @@ gold_plot <- ggplot(data = gold_df) +
 gold_plot
 
 ## Write cleaned data ----
-write.csv(gold_df, "Cleaned Gold Data.csv")
+write.csv(gold_df, "Cleaned Gold Data.csv",
+          row.names = FALSE)
+write.table(gold_df, "Cleaned Gold Data.txt",
+            append = FALSE, 
+            sep = " ", 
+            dec = ".",
+            row.names = FALSE,
+            col.names = TRUE)
+
 
 
